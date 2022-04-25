@@ -1,5 +1,9 @@
 dataset_type = 'NuScenesMonoDataset'
-data_root = 'data/nuscenes/'
+# data_root = 'data/nuscenes/'
+data_root = 'data/nuscenes/v1.0-mini/'
+# data_root = '/home/master/10/cytseng/data/sets/nuscenes/v1.0-mini/'
+version = 'v1.0-mini'
+
 class_names = [
     'car', 'truck', 'trailer', 'bus', 'construction_vehicle', 'bicycle',
     'motorcycle', 'pedestrian', 'traffic_cone', 'barrier'
@@ -68,6 +72,7 @@ data = dict(
     samples_per_gpu=2,
     workers_per_gpu=2,
     train=dict(
+        version=version,
         type=dataset_type,
         data_root=data_root,
         ann_file=data_root + 'nuscenes_infos_train_mono3d.coco.json',
@@ -78,6 +83,7 @@ data = dict(
         test_mode=False,
         box_type_3d='Camera'),
     val=dict(
+        version=version,
         type=dataset_type,
         data_root=data_root,
         ann_file=data_root + 'nuscenes_infos_val_mono3d.coco.json',
@@ -88,6 +94,7 @@ data = dict(
         test_mode=True,
         box_type_3d='Camera'),
     test=dict(
+        version=version,
         type=dataset_type,
         data_root=data_root,
         ann_file=data_root + 'nuscenes_infos_val_mono3d.coco.json',

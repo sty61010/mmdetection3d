@@ -8,6 +8,8 @@ class_names = [
 ]
 dataset_type = 'NuScenesDataset'
 data_root = 'data/nuscenes/'
+# data_root = '/home/master/10/cytseng/data/sets/nuscenes/v1.0-mini/'
+
 # Input modality for nuScenes dataset, this is consistent with the submission
 # format which requires the information in input_modality.
 input_modality = dict(
