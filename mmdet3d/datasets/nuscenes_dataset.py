@@ -189,6 +189,7 @@ class NuScenesDataset(Custom3DDataset):
         data_infos = data_infos[::self.load_interval]
         self.metadata = data['metadata']
         self.version = self.metadata['version']
+        print(f'version: {self.version}')
         return data_infos
 
     def get_data_info(self, index):

@@ -1,9 +1,13 @@
 dataset_type = 'NuScenesMonoDataset'
-data_root = 'data/nuscenes/'
+
+version = ''
+# version = 'v1.0-trainval'
+version = 'v1.0-mini'
+data_root = 'data/nuscenes/' + version
+if version != '':
+    data_root += '/'
 # data_root = 'data/nuscenes/v1.0-mini/'
-# data_root = '/home/master/10/cytseng/data/sets/nuscenes/v1.0-mini/'
-version = 'v1.0-trainval'
-# version = 'v1.0-mini'
+
 
 class_names = [
     'car', 'truck', 'trailer', 'bus', 'construction_vehicle', 'bicycle',
