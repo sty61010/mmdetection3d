@@ -12,4 +12,4 @@ CONFIG=$1
 PY_ARGS=${@:2}
 
 PYTHONPATH="$(dirname $0)/..":$PYTHONPATH \
-srun python -u tools/train.py ${CONFIG} --launcher="slurm" ${PY_ARGS}
+srun python3 -u tools/train.py ${CONFIG} --launcher="slurm" ${PY_ARGS}
