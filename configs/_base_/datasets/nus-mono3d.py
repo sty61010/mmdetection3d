@@ -1,11 +1,12 @@
 dataset_type = 'NuScenesMonoDataset'
 
-version = ''
-# version = 'v1.0-trainval'
-version = 'v1.0-mini'
-data_root = 'data/nuscenes/' + version
-if version != '':
-    data_root += '/'
+# version = ''
+version = 'v1.0-trainval'
+# version = 'v1.0-mini'
+if version == 'v1.0-mini':
+    data_root = 'data/nuscenes/' + version + '/'
+else:
+    data_root = 'data/nuscenes/'
 # data_root = 'data/nuscenes/v1.0-mini/'
 
 
