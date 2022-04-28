@@ -1,14 +1,15 @@
 dataset_type = 'NuScenesMonoDataset'
 
-# version = ''
-version = 'v1.0-trainval'
-# version = 'v1.0-mini'
-if version == 'v1.0-mini':
-    data_root = 'data/nuscenes/' + version + '/'
-else:
-    data_root = 'data/nuscenes/'
-# data_root = 'data/nuscenes/v1.0-mini/'
+# version = 'v1.0-trainval'
+version = 'v1.0-mini'
 
+# if version == 'v1.0-mini':
+#     data_root = 'data/nuscenes/' + version + '/'
+# else:
+#     data_root = 'data/nuscenes/'
+# data_root = 'data/nuscenes/v1.0-mini/'
+# data_root = '/work/sty61010/datasets/nuscenes/ + version + '/'
+data_root = '/home/master/10/cytseng/data/sets/nuscenes/' + version + '/'
 
 class_names = [
     'car', 'truck', 'trailer', 'bus', 'construction_vehicle', 'bicycle',
