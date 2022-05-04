@@ -125,7 +125,9 @@ class NuScenesDataset(Custom3DDataset):
                  filter_empty_gt=True,
                  test_mode=False,
                  eval_version='detection_cvpr_2019',
-                 use_valid_flag=False):
+                 use_valid_flag=False,
+                 data_length=-1,
+                 ):
         self.load_interval = load_interval
         self.use_valid_flag = use_valid_flag
         super().__init__(
@@ -136,7 +138,9 @@ class NuScenesDataset(Custom3DDataset):
             modality=modality,
             box_type_3d=box_type_3d,
             filter_empty_gt=filter_empty_gt,
-            test_mode=test_mode)
+            test_mode=test_mode,
+            data_length=data_length,
+        )
 
         self.with_velocity = with_velocity
         self.eval_version = eval_version

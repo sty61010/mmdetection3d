@@ -51,7 +51,9 @@ class Custom3DDataset(Dataset):
                  modality=None,
                  box_type_3d='LiDAR',
                  filter_empty_gt=True,
-                 test_mode=False):
+                 test_mode=False,
+                 data_length=-1,
+                 ):
         super().__init__()
         self.data_root = data_root
         self.ann_file = ann_file
@@ -69,6 +71,8 @@ class Custom3DDataset(Dataset):
 
         # set group flag for the sampler
         if not self.test_mode:
+            self.data_infos = self.data_infos[:data_length]
+
             self._set_group_flag()
 
     def load_annotations(self, ann_file):
