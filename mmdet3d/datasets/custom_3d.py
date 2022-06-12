@@ -52,7 +52,7 @@ class Custom3DDataset(Dataset):
                  box_type_3d='LiDAR',
                  filter_empty_gt=True,
                  test_mode=False,
-                 data_length=-1,
+                 data_length=500000,
                  ):
         super().__init__()
         self.data_root = data_root
